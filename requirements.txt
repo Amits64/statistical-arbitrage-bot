@@ -1,0 +1,8 @@
+ccxt
+statsmodels
+hurst
+matplotlib
+numpy
+pandas
+scipy
+
