@@ -42,9 +42,10 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/arbi_x_bot:v${{ github.run_number }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/arbi_x_bot:latest
+            amits64/stastical-arbitrage-bot:v${{ github.run_number }}
+            amits64/stastical-arbitrage-bot:latest
 
 
