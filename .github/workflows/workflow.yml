@@ -45,6 +45,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGE }}:v${{ github.run_number }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGE }}:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/arbi_x_bot:v${{ github.run_number }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/arbi_x_bot:latest
+
 
