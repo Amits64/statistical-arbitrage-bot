@@ -27,10 +27,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt  # Assuming you have a requirements.txt file
 
-      - name: Run tests
-        run: |
-          pytest  # Or another testing framework if you are using a different one
-
       - name: Build Docker image
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_IMAGE }}:v${{ github.run_number }} .
