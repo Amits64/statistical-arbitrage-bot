@@ -40,12 +40,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Build and push
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v6
         with:
-          context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/stastical-arbitrage-bot:v${{ github.run_number }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/stastical-arbitrage-bot:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/arbi_x_bot:v${{ github.run_number }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/arbi_x_bot:latest
 
 
